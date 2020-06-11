@@ -33,7 +33,7 @@ console.log(isFile('/home/ena/Desktop/Proyectos de Laboratoria/LIM012-card-valid
 const isAMarkdownFile = (routeInput) => (path.extname(routeInput) === '.md');
 console.log(isAMarkdownFile('/home/ena/Desktop/Proyectos de Laboratoria/LIM012-card-validation/README.css'));
 // revisa el archivo md y extrae las propiedades href, text, file y las guarda en un array
-// marked cambia el formato markdown a html
+// marked cambia el formato de markdown a html
 // new jsdom es objeto constructor de simulacion del dom
 const getPropertiesOfMarkdownFile = (file) => {
   const propertiesOfFile = [];
