@@ -16,6 +16,9 @@ console.log(convertPath('mkdir ~/Fotos'));
 // verificar si es un directorio
 const isDirectory = (routeInput) => (fs.statSync(routeInput).isDirectory()); // ? true : 'Is not a directory ');
 console.log(isDirectory('/home/ena/Desktop'));
+// lee el contenido del directorio
+const reviewDirectoryContent = (routeInput) => fs.readdirSync(routeInput);
+console.log(reviewDirectoryContent('/home/ena/Desktop/Proyectos de Laboratoria/LIM012-card-validation/'));
 // verifica si es un archivo
 const isFile = (routeInput) => (fs.statSync(routeInput).isFile());
 console.log(isFile('/home/ena/Desktop/Proyectos de Laboratoria/LIM012-card-validation/README.md'));
@@ -24,4 +27,5 @@ module.exports = {
   convertPath,
   isDirectory,
   isFile,
+  reviewDirectoryContent,
 };

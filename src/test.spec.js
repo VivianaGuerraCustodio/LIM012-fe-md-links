@@ -4,7 +4,7 @@
 const path = require('path');
 const fs = require('fs');
 const {
-  validateRoute, convertPath, isDirectory, isFile,
+  validateRoute, convertPath, isDirectory, isFile, reviewDirectoryContent,
 } = require('./index.js');
 
 describe('Verificar si la ruta es valida', () => {
@@ -49,5 +49,26 @@ describe('Verifica si la ruta ingresada es un archivo', () => {
   it('Debe verificar si la ruta es un archivo', () => {
     expect(isFile('/home/ena/Desktop/Proyectos de Laboratoria/LIM012-card-validation/README.md'))
       .toBe(true);
+  });
+});
+
+describe('Revisa el contenido de un directorio', () => {
+  it('Es una función', () => {
+    expect(typeof reviewDirectoryContent).toBe('function');
+  });
+  it('Devuelve el contenido del directorio', () => {
+    expect(reviewDirectoryContent('/home/ena/Desktop/Proyectos de Laboratoria/LIM012-card-validation/'))
+      .toBe([
+        '.babelrc',
+        '.editorconfig',
+        '.eslintrc',
+        '.git',
+        '.gitignore',
+        'README.md',
+        'package-lock.json',
+        'package.json',
+        'src',
+        'test',
+      ]);
   });
 });
