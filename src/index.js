@@ -4,6 +4,7 @@
 const http = require('http');
 const path = require('path');
 const fs = require('fs');
+const jsdom = require('jsdom');
 
 // validar si la ruta es válida o no (preguntar acerca de esto porque la ruta relativa no la valida)
 const validateRoute = (routeInput) => (fs.existsSync(routeInput) ? routeInput : 'The input route is not valid');
