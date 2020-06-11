@@ -22,10 +22,15 @@ console.log(reviewDirectoryContent('/home/ena/Desktop/Proyectos de Laboratoria/L
 // verifica si es un archivo
 const isFile = (routeInput) => (fs.statSync(routeInput).isFile());
 console.log(isFile('/home/ena/Desktop/Proyectos de Laboratoria/LIM012-card-validation/README.md'));
+// ¿El archivo tiene extensión .md?
+const isAMarkdownFile = (routeInput) => (path.extname(routeInput) === '.md');
+console.log(isAMarkdownFile('/home/ena/Desktop/Proyectos de Laboratoria/LIM012-card-validation/README.css'));
+
 module.exports = {
   validateRoute,
   convertPath,
   isDirectory,
   isFile,
   reviewDirectoryContent,
+  isAMarkdownFile,
 };

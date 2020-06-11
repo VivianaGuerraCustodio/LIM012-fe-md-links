@@ -4,7 +4,7 @@
 const path = require('path');
 const fs = require('fs');
 const {
-  validateRoute, convertPath, isDirectory, isFile, reviewDirectoryContent,
+  validateRoute, convertPath, isDirectory, isFile, reviewDirectoryContent, isAMarkdownFile,
 } = require('./index.js');
 
 describe('Verificar si la ruta es valida', () => {
@@ -58,7 +58,7 @@ describe('Revisa el contenido de un directorio', () => {
   });
   it('Devuelve el contenido del directorio', () => {
     expect(reviewDirectoryContent('/home/ena/Desktop/Proyectos de Laboratoria/LIM012-card-validation/'))
-      .toBe([
+      .toEqual([
         '.babelrc',
         '.editorconfig',
         '.eslintrc',
@@ -70,5 +70,19 @@ describe('Revisa el contenido de un directorio', () => {
         'src',
         'test',
       ]);
+  });
+});
+
+describe('Verifica si es un archivo markdown', () => {
+  it('Es una función', () => {
+    expect(typeof isAMarkdownFile).toBe('function');
+  });
+  it('Debe validar que es un archivo con extension .md', () => {
+    expect(isAMarkdownFile('/home/ena/Desktop/Proyectos de Laboratoria/LIM012-card-validation/README.md'))
+      .toBe(true);
+  });
+  it('Debe validar devolver false ya que no es un archivo con extension .md', () => {
+    expect(isAMarkdownFile('/home/ena/Desktop/Proyectos de Laboratoria/LIM012-card-validation/README.css'))
+      .toBe(false);
   });
 });
