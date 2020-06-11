@@ -5,7 +5,6 @@ const http = require('http');
 const path = require('path');
 const fs = require('fs');
 
-
 // validar si la ruta es válida o no (preguntar acerca de esto porque la ruta relativa no la valida)
 const validateRoute = (routeInput) => (fs.existsSync(routeInput) ? routeInput : 'The input route is not valid');
 console.log(validateRoute('/etc/passwd'));
@@ -14,11 +13,15 @@ console.log(validateRoute('/etc/passwd'));
 // en el operador ternario
 const convertPath = (routeInput) => (path.isAbsolute(routeInput) ? routeInput : path.resolve(routeInput));
 console.log(convertPath('mkdir ~/Fotos'));
-// verificar si es un directorio o un archivo
-const directory = (routeInput) => (fs.statSync(routeInput).isDirectory()); // ? true : 'Is not a directory ');
-console.log(directory('/home/ena/Desktop'));
+// verificar si es un directorio
+const isDirectory = (routeInput) => (fs.statSync(routeInput).isDirectory()); // ? true : 'Is not a directory ');
+console.log(isDirectory('/home/ena/Desktop'));
+// verifica si es un archivo
+const isFile = (routeInput) => (fs.statSync(routeInput).isFile());
+console.log(isFile('/home/ena/Desktop/Proyectos de Laboratoria/LIM012-card-validation/README.md'));
 module.exports = {
   validateRoute,
   convertPath,
-  directory,
+  isDirectory,
+  isFile,
 };
