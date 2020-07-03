@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /* eslint-disable no-undef */
 const path = require('path');
 const fetchMock = require('../_mocks_/nodeFetch.js');

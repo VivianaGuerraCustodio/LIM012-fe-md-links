@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+/* eslint-disable consistent-return */
 
 /* eslint-disable no-console */
 
@@ -34,13 +35,16 @@ const option = argvs[3];
 const option0 = argvs[4];
 
 const cli = (route, option1, option2) => {
+  if (route === undefined) {
+    return console.log(`${help}`);
+  }
   if (route.length > 0) {
     if ((option1 === undefined) && (option2 === undefined)) {
-      mdLinks(route, '').then((resp) => console.log(resp))
+      return mdLinks(route, '').then((resp) => console.log(resp))
         .catch((error) => console.log(`Error${error} generado n/ ${help}`));
     }
     if ((option1 === '--stats' && option2 === '--validate') || (option2 === '--stats' && option1 === '--validate')) {
-      mdLinks(route, { validate: true }).then((resp) => {
+      return mdLinks(route, { validate: true }).then((resp) => {
         console.log(`✔️ Total : ${statsAndValidate(resp).total}`);
         console.log(`✔️ Unique : ${statsAndValidate(resp).unique}`);
         console.log(`❌ Broken : ${statsAndValidate(resp).broken}`);
@@ -48,18 +52,16 @@ const cli = (route, option1, option2) => {
         .catch((error) => console.log(`Error${error} generado n/ ${help}`));
     }
     if (option1 === '--validate') {
-      mdLinks(route, { validate: true }).then((resp) => console.table(resp))
+      return mdLinks(route, { validate: true }).then((resp) => console.table(resp))
         .catch((error) => console.log(`Error${error} generado n/ ${help}`));
     }
     if (option1 === '--stats') {
-      mdLinks(route, { validate: true }).then((resp) => {
+      return mdLinks(route, { validate: true }).then((resp) => {
         console.log(`✔️ Total : ${optionStats(resp).total}`);
         console.log(`✔️ Unique : ${optionStats(resp).unique}`);
       })
         .catch((error) => console.log(`Error${error} generado n/ ${help}`));
     }
-  } if (route === undefined) {
-    console.log(`${help}`);
   }
 };
 cli(path, option, option0);

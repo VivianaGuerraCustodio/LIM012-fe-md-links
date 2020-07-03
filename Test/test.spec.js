@@ -3,7 +3,6 @@
 /* eslint-disable no-undef */
 const path = require('path');
 const fs = require('fs');
-const { rejects } = require('assert');
 const {
   validateRoute,
   convertPath,
