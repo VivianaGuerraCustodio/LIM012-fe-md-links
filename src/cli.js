@@ -12,7 +12,7 @@ const optionStats = (linksArr) => {
 const statsAndValidate = (linksArr) => {
   const totalLinks = linksArr.length;
   const uniqueLinks = [...new Set(linksArr.map((links) => links.href))].length;
-  const brokenLinks = linksArr.filter((element) => element.statustext === 'Fail' || element.statusText === 'Not found').length;
+  const brokenLinks = linksArr.filter((element) => element.status >= 400).length;
   return { total: totalLinks, unique: uniqueLinks, broken: brokenLinks };
 };
 const help = `
@@ -58,7 +58,7 @@ const cli = (route, option1, option2) => {
       })
         .catch((error) => console.log(`Error${error} generado n/ ${help}`));
     }
-  } if (route === 0) {
+  } if (route === undefined) {
     console.log(`${help}`);
   }
 };
