@@ -20,6 +20,7 @@
     "url": "https://github.com/VivianaGuerraCustodio/LIM012-fe-md-links/issues"
   },
   "homepage": "https://github.com/VivianaGuerraCustodio/LIM012-fe-md-links#readme",
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
   "scripts": {
     "test": "jest --coverage",
     "start": "node ./src/index.js"
