@@ -1,30 +1,52 @@
 {
-  "name": "lim012-fe-md-links",
+  "name": "vivianagc-md-links",
   "version": "1.0.0",
-  "description": "[Markdown](https://es.wikipedia.org/wiki/Markdown) es un lenguaje de marcado\r ligero muy popular entre developers. Es usado en muchísimas plataformas que\r manejan texto plano (GitHub, foros, blogs, ...), y es muy común\r encontrar varios archivos en ese formato en cualquier tipo de repositorio\r (empezando por el tradicional `README.md`).",
+  "description": "La función de esta librería es validar los links que esten presentes en archivos markdown",
   "main": "index.js",
-  "scripts": {
-    "test": "jest --coverage",
-    "start": "node ./src/index.js"
+  "bin": {
+    "mdLinks": "./src/cli.js"
   },
+  "author": {
+    "name": "Viviana",
+    "email": "vivianaguerracustodio@gmail.com",
+    "url": "https://github.com/VivianaGuerraCustodio"
+  },
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/VivianaGuerraCustodio/LIM012-fe-md-links.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/VivianaGuerraCustodio/LIM012-fe-md-links/issues"
   },
   "homepage": "https://github.com/VivianaGuerraCustodio/LIM012-fe-md-links#readme",
+  "scripts": {
+    "test": "jest --coverage",
+    "start": "node ./src/index.js"
+  },
+  "keywords": [
+    "javascript",
+    "node",
+    "package",
+    "npm",
+    "md-links",
+    "mdLinks"
+  ],
+  "files": [
+    "index.js",
+    "cli.js",
+    "mdLinks.js"
+  ],
   "devDependencies": {
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.1.0",
     "eslint-plugin-import": "^2.20.2",
-    "jest": "^26.0.1"
+    "jest": "^26.0.1",
+    "jest-fetch-mock": "^3.0.3"
   },
   "dependencies": {
+    "fetch-mock": "^9.10.3",
+    "isomorphic-fetch": "^2.2.1",
     "jsdom": "^16.2.2",
     "marked": "^1.1.0",
     "node-fetch": "^2.6.0"
