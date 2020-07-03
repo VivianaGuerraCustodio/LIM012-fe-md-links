@@ -11,7 +11,6 @@ const optionStats = (linksArr) => {
 };
 const statsAndValidate = (linksArr) => {
   const totalLinks = linksArr.length;
-  // operador de propagación ... descomponemos el array de elementos y pasamos por cada uno de ellos
   const uniqueLinks = [...new Set(linksArr.map((links) => links.href))].length;
   const brokenLinks = linksArr.filter((element) => element.statustext === 'Fail' || element.statusText === 'Not found').length;
   return { total: totalLinks, unique: uniqueLinks, broken: brokenLinks };
