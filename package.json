@@ -46,7 +46,6 @@
   },
   "dependencies": {
     "fetch-mock": "^9.10.3",
-    "isomorphic-fetch": "^2.2.1",
     "jsdom": "^16.2.2",
     "marked": "^1.1.0",
     "node-fetch": "^2.6.0"
