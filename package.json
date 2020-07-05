@@ -1,6 +1,6 @@
 {
   "name": "vivianagc-md-links",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "La función de esta librería es validar los links que esten presentes en archivos markdown",
   "main": "index.js",
   "bin": {

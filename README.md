@@ -3,38 +3,38 @@
 El proyecto consiste en elaborar una librería en node.js para validar links que se encuentran en archivos con markdown 
 ## Planeación en Github Projects ➡️ [🗓️](https://github.com/VivianaGuerraCustodio/LIM012-fe-md-links/projects)
 <p align="center">
-  <img src="./src/assets/Screenshot from 2020-07-01 01-56-14.png">
+<img src = 'https://github.com/VivianaGuerraCustodio/LIM012-fe-md-links/blob/develop/src/assets/Screenshot%20from%202020-07-01%2001-56-14.png?raw=true'>
 </p>
 
 ## ✔️ Diagrama de flujo 
 <p align="center">
-  <img src="./src/assets/flowchart(1).jpg">
+  <img src="https://github.com/VivianaGuerraCustodio/LIM012-fe-md-links/blob/develop/src/assets/flowchart(1).jpg?raw=true">
 </p>
 
 ### CLI
 · Si en caso no se ingresa ruta alguna, al ejecutar el comando `mdLinks` en la terminal , aparecerá un mensaje como guía.
 <p align="center">
-  <img src="./src/assets/help.png">
+  <img src="https://github.com/VivianaGuerraCustodio/LIM012-fe-md-links/blob/develop/src/assets/help.png?raw=true">
 </p>
 
 · `mdLinks <invalid path>`
 <p align="center">
-  <img src="./src/assets/invalid-path.png">
+  <img src="https://github.com/VivianaGuerraCustodio/LIM012-fe-md-links/blob/develop/src/assets/invalid-path.png?raw=true">
 </p>
 
 ·  `mdLinks <path> --validate`
 <p align="center">
-  <img src="./src/assets/validate.png">
+  <img src="https://github.com/VivianaGuerraCustodio/LIM012-fe-md-links/blob/develop/src/assets/validate.png?raw=true">
 </p>
 
 · `mdLinks <path> --stats`
 <p align="center">
-  <img src="./src/assets/stats.png">
+  <img src="https://github.com/VivianaGuerraCustodio/LIM012-fe-md-links/blob/develop/src/assets/stats.png?raw=true">
 </p>
 
 · `mdLinks <path> --validate --stats`
 <p align="center">
-  <img src="./src/assets/validateAndStats.png">
+  <img src="https://github.com/VivianaGuerraCustodio/LIM012-fe-md-links/blob/develop/src/assets/validateAndStats.png?raw=true">
 </p>
 
 
