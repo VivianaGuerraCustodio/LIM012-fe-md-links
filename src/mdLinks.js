@@ -10,9 +10,7 @@ const {
 const mdLinks = (path, options = { validate: true }) => {
   const newPromise = new Promise((resolve, reject) => {
     const absoluteRoute = convertPath(path);
-    if (validateRoute(path) === true && options.validate === undefined) {
-      return resolve(getLinksAndPathComplete(absoluteRoute));
-    } if (validateRoute(path) === true && options.validate === '') {
+    if ((validateRoute(path) === true && options.validate === undefined) || (validateRoute(path) === true && options.validate === '')) {
       return resolve(getLinksAndPathComplete(absoluteRoute));
     } if (validateRoute(path) === true && options.validate === true) {
       return validateAllLinks(absoluteRoute).then((resp) => {
