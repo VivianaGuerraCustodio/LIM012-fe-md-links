@@ -57,9 +57,9 @@ El proyecto consiste en elaborar una librería en node.js para validar links que
 
 ### Testing
 - [✔️] Testeo de tus funciones
-- [ ] Testeo asíncrono
-- [ ] Uso de librerias de Mock
-- [ ] Mocks manuales
+- [✔️] Testeo asíncrono
+- [✔️] Uso de librerias de Mock
+- [✔️] Mocks manuales
 - [ ] Testeo para multiples Sistemas Operativos
 
 ### Git y Github
