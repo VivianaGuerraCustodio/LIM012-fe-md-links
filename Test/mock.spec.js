@@ -63,7 +63,7 @@ describe('mdLinks', () => {
 
   it('debería retornar una lista: href, path y text', () => {
     md.mdLinks(fileMarkdown, { validate: false }).then((res) => {
-      expect(res).toEqual(containerOfAnArrayOfLinks);
+      expect(res).toContain(containerOfAnArrayOfLinks);
     }).catch((error) => {
       console.log(error);
     });
