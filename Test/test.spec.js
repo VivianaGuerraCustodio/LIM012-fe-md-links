@@ -13,7 +13,6 @@ const {
   getPropertiesOfMarkdownFile,
   getMarkdownFiles,
   getLinksAndPathComplete,
-  validateAllLinks,
 } = require('../src/index.js');
 
 describe('Verificar si la ruta es valida', () => {
